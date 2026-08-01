@@ -21,21 +21,21 @@ public class StudentGradeCalculator {
                 System.out.print("Enter marks for subject " + i + " (out of 100): ");
                 currentMark = Integer.parseInt(sc.nextLine());
 
-                // Defensive Programming: Validate input bounds (0 to 100)[cite: 1]
+                // Defensive Programming: Validate input bounds (0 to 100)
                 if (currentMark >= 0 && currentMark <= 100) {
                     break;
                 } else {
                     System.out.println("Invalid input! Marks must be between 0 and 100. Try again.");
                 }
             }
-            // Accumulating total marks[cite: 1]
+            // Accumulating total marks
             totalMarks += currentMark;
         }
 
-        // Phase II: Type Casting to prevent integer division truncation[cite: 1]
+        // Phase II: Type Casting to prevent integer division truncation
         double averagePercentage = (double) totalMarks / numSubjects;
 
-        // Phase II: The Logic Ladder (Grade Assignment)[cite: 1]
+        // Phase II: The Logic Ladder (Grade Assignment)
         char grade;
         if (averagePercentage >= 90) {
             grade = 'A';
@@ -49,7 +49,7 @@ public class StudentGradeCalculator {
             grade = 'F';
         }
 
-        // Phase III: Output - Presentation Layer (Formatted Print)[cite: 1]
+        // Phase III: Output - Presentation Layer (Formatted Print)
         System.out.println("\n==========================================");
         System.out.println("       ACADEMIC PERFORMANCE REPORT        ");
         System.out.println("==========================================");
